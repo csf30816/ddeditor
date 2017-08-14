@@ -101,21 +101,27 @@
     </div>
     
     <script>
-      function allowDrop(ev) {
+      var exportcode = "";
+      
+      function update (html) {
+        exportcode += html;
+        document.getElementById('dragon').innerHTML = exportcode;
+      }
+      
+      function allowDrop (ev) {
         ev.preventDefault();
       }
       
-      function drag(ev) {
+      function drag (ev) {
         ev.dataTransfer.setData("text", ev.target.id);
       }
       
-      function drop(ev) {
+      function drop (ev) {
         ev.preventDefault();
         var data = ev.dataTransfer.getData("text");
-        var exportcode = "";
         console.log("The data is: " + data);
         if (data == "text") {
-          exportcode += "text";
+          update("text");
         }
       }
     </script>
