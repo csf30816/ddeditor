@@ -94,7 +94,7 @@
         </div>
       </div>
       <div class="view">
-        <iframe href="data:text/html, Start Dragging and Dropping!" class="dragon" id="dragon" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <iframe href="./show.html?html=hi, Start Dragging and Dropping!" class="dragon" id="dragon" ondragover="allowDrop(event)" ondrop="drop(event)">
           
         </iframe>
       </div>
@@ -116,7 +116,7 @@
         console.log("The data is: " + data);
         if (data == "text") {
           exportcode += "text";
-          document.getElementById('dragon').href="data:text/html,"+exportcode;
+          document.getElementById('dragon').href="./show.html?url=,"+uriencode(exportcode);
         }
       }
     </script>
