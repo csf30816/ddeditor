@@ -69,7 +69,7 @@
     </div>
     <div class="editor">
       <div class="menu">
-        <div class="dragItem" draggable="true" id="title" ondragstart="drag(event)">
+        <div class="dragItem" draggable="true" id="text" ondragstart="drag(event)">
           <span><i class="fa fa-font"></i></span>
         </div>
         
@@ -94,9 +94,9 @@
         </div>
       </div>
       <div class="view">
-        <div class="dragon" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <iframe href="data:text/html, Start Dragging and Dropping!" class="dragon" id="dragon" ondragover="allowDrop(event)" ondrop="drop(event)">
           
-        </div>
+        </iframe>
       </div>
     </div>
     
@@ -112,7 +112,12 @@
       function drop(ev) {
         ev.preventDefault();
         var data = ev.dataTransfer.getData("text");
+        var exportcode = "";
         console.log("The data is: " + data);
+        if (data == "text") {
+          exportcode += "text";
+          document.getElementById('dragon').href="data:text/html,"+exportcode;
+        }
       }
     </script>
   </body>
