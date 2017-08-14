@@ -19,7 +19,7 @@
         height: calc(100% - 40px);
       }
       .menu {
-        width: 250px;
+        width: auto;
         background-color: #989898;
       }
       .view {
@@ -48,7 +48,7 @@
         padding: 10px;
         font-size: 60px;
         position: relative;
-        width: 115px;
+        width: 125px;
       }
       .dragItem span {
         display: block;
@@ -72,6 +72,8 @@
         <div class="dragItem" draggable="true" id="image" ondragstart="drag(event)">
           <span><i class="fa fa-image"></i></span>
         </div>
+        
+        <br>
         
         <div class="dragItem" draggable="true" id="video" ondragstart="drag(event)">
           <span><i class="fa fa-youtube-play"></i></span>
