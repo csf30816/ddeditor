@@ -50,6 +50,7 @@
         padding: 10px;
         font-size: 60px;
         position: relative;
+        min-width: 110px;
       }
       .dragItem span {
         display: block;
@@ -69,13 +70,15 @@
         <div class="dragItem" draggable="true" id="title" ondragstart="drag(event)">
           <span><i class="fa fa-font"></i></span>
         </div>
+        
         <div class="dragItem" draggable="true" id="image" ondragstart="drag(event)">
           <span><i class="fa fa-image"></i></span>
         </div>
-        <br>
+        
         <div class="dragItem" draggable="true" id="video" ondragstart="drag(event)">
           <span><i class="fa fa-youtube-play"></i></span>
         </div>
+        
         <div class="dragItem" draggable="true" id="code" ondragstart="drag(event)">
           <span><i class="fa fa-code"></i></span>
         </div>
